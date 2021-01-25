@@ -7,15 +7,15 @@ import axios from "axios";
 export default function ProductScreen({ match }) {
   const [product, setProduct] = useState({});
 
-  const fetchProduct = async () => {
-    const { data } = await axios.get(`/api/products/${match.params.id}`);
-
-    setProduct(data);
-  };
-
   useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${match.params.id}`);
+
+      setProduct(data);
+    };
+
     fetchProduct();
-  });
+  }, [match]);
 
   return (
     <>
