@@ -6,15 +6,17 @@ export default function Header() {
     <header>
       <Navbar bg="primary" variant="dark" expand="lg" collapseOnSelect>
         <Container>
-          <Navbar.Brand href="/">Alibaba Shop</Navbar.Brand>
+          <Navbar.Brand href="/" style={{ fontWeight: "bold" }}>
+            Alibaba Shop
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
               <Nav.Link href="/cart">
-                <i className="fas fa-shopping-cart"></i>Cart
+                <i className="fas fa-shopping-cart"></i> Cart
               </Nav.Link>
               <Nav.Link href="/login">
-                <i className="fas fa-user"></i>Sign In
+                <i className="fas fa-user"></i> Sign In
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
