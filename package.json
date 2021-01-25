@@ -1,0 +1,14 @@
+{
+  "name": "alibaba-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server"
+  },
+  "author": "Ali Ahmad",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
