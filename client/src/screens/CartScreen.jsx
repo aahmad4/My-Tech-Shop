@@ -11,7 +11,7 @@ import {
   Card,
 } from "react-bootstrap";
 import Message from "../components/Message";
-import { addToCart } from "../actions/cartActions";
+import { addToCart, removeFromCart } from "../actions/cartActions";
 
 export default function CartScreen({ history, match, location }) {
   const productId = match.params.id;
@@ -30,7 +30,7 @@ export default function CartScreen({ history, match, location }) {
   }, [dispatch, productId, qty]);
 
   const removeFromCartHandler = (id) => {
-    console.log("remove");
+    dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {
@@ -48,10 +48,7 @@ export default function CartScreen({ history, match, location }) {
         ) : (
           <ListGroup variant="flush">
             {cartItems.map((item) => (
-              <ListGroup.Item
-                key={item.product}
-                style={{ backgroundColor: "darkgrey", color: "black" }}
-              >
+              <ListGroup.Item key={item.product}>
                 <Row>
                   <Col md={2}>
                     <Image src={item.image} alt={item.name} fluid rounded />
