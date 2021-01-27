@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row, Col } from "react-bootstrap";
 import Product from "../components/Product";
+import Message from "../components/Message";
+import Loader from "../components/Loader";
 import { listProducts } from "../actions/productActions";
 
 export default function HomeScreen() {
@@ -18,9 +20,9 @@ export default function HomeScreen() {
     <>
       <h1>🎧 Latest Products 📱</h1>
       {loading ? (
-        <h2>Loading...</h2>
+        <Loader />
       ) : error ? (
-        <h3>{error}</h3>
+        <Message variant="danger">{error}</Message>
       ) : (
         products &&
         products.length && (
