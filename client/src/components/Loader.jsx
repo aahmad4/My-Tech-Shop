@@ -13,7 +13,7 @@ export default function Loader() {
         display: "block",
       }}
     >
-      <span class="sr-only">Loading...</span>
+      <span className="sr-only">Loading...</span>
     </Spinner>
   );
 }
