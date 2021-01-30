@@ -40,7 +40,7 @@ export default function CartScreen({ history, match, location }) {
   return (
     <Row>
       <Col md={8}>
-        <h1>🛒 Shopping Cart 🛒</h1>
+        <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (
           <Message>
             Your cart is empty <Link to="/">Go Back</Link>
@@ -48,7 +48,15 @@ export default function CartScreen({ history, match, location }) {
         ) : (
           <ListGroup variant="flush">
             {cartItems.map((item) => (
-              <ListGroup.Item key={item.product}>
+              <ListGroup.Item
+                key={item.product}
+                style={{
+                  backgroundColor: "white",
+                  color: "#444444",
+                  fontWeight: "bold",
+                }}
+                className="my-1 p-3 rounded card"
+              >
                 <Row>
                   <Col md={2}>
                     <Image src={item.image} alt={item.name} fluid rounded />
@@ -77,7 +85,11 @@ export default function CartScreen({ history, match, location }) {
                   <Col md={2}>
                     <Button
                       type="button"
-                      variant="light"
+                      style={{
+                        backgroundColor: "#ffffff",
+                        border: "none",
+                        color: "red",
+                      }}
                       onClick={() => removeFromCartHandler(item.product)}
                     >
                       <i className="fas fa-trash"></i>
