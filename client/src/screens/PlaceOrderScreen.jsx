@@ -79,7 +79,14 @@ export default function PlaceOrderScreen({ history }) {
               ) : (
                 <ListGroup variant="flush">
                   {cart.cartItems.map((item, index) => (
-                    <ListGroup.Item key={index}>
+                    <ListGroup.Item
+                      key={index}
+                      style={{
+                        backgroundColor: "lightgrey",
+                        color: "#444444",
+                      }}
+                      className="my-1 p-3 rounded card"
+                    >
                       <Row>
                         <Col md={1}>
                           <Image
