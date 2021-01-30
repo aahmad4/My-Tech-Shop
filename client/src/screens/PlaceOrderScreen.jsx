@@ -57,96 +57,151 @@ export default function PlaceOrderScreen({ history }) {
       <CheckoutSteps step1 step2 step3 step4 />
       <Row>
         <Col md={8}>
-          <ListGroup variant="flush">
-            <ListGroup.Item>
-              <h2>Shipping</h2>
-              <p>
-                <strong>Address: </strong>
-                {cart.shippingAddress.address}, {cart.shippingAddress.city}{" "}
-                {cart.shippingAddress.postalCode},{" "}
-                {cart.shippingAddress.country}
-              </p>
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <h2>Payment Method</h2>
-              <strong>Method: </strong>
-              {cart.paymentMethod && cart.paymentMethod.paymentMethod}
-            </ListGroup.Item>
-            <ListGroup.Item>
-              <h2>Order Items</h2>
-              {cart.cartItems.length === 0 ? (
-                <Message>Your cart is empty</Message>
-              ) : (
-                <ListGroup variant="flush">
-                  {cart.cartItems.map((item, index) => (
-                    <ListGroup.Item
-                      key={index}
-                      style={{
-                        backgroundColor: "lightgrey",
-                        color: "#444444",
-                      }}
-                      className="my-1 p-3 rounded card"
-                    >
-                      <Row>
-                        <Col md={1}>
-                          <Image
-                            src={item.image}
-                            alt={item.name}
-                            fluid
-                            rounded
-                          />
-                        </Col>
-                        <Col>
-                          <Link to={`/product/${item.product}`}>
-                            {item.name}
-                          </Link>
-                        </Col>
-                        <Col md={4}>
-                          {item.qty} x ${item.price} = $
-                          {(item.qty * item.price).toFixed(2)}
-                        </Col>
-                      </Row>
-                    </ListGroup.Item>
-                  ))}
-                </ListGroup>
-              )}
-            </ListGroup.Item>
-          </ListGroup>
+          <Card>
+            <ListGroup variant="flush">
+              <ListGroup.Item
+                style={{
+                  backgroundColor: "#edf2f7",
+                  color: "#444444",
+                }}
+              >
+                <h2>Shipping</h2>
+                <p>
+                  <strong>Address: </strong>
+                  {cart.shippingAddress.address}, {cart.shippingAddress.city}{" "}
+                  {cart.shippingAddress.postalCode},{" "}
+                  {cart.shippingAddress.country}
+                </p>
+                <hr />
+              </ListGroup.Item>
+              <ListGroup.Item
+                style={{
+                  backgroundColor: "#edf2f7",
+                  color: "#444444",
+                }}
+              >
+                <h2>Payment Method</h2>
+                <strong>Method: </strong>
+                {cart.paymentMethod && cart.paymentMethod.paymentMethod}
+                <hr />
+              </ListGroup.Item>
+              <ListGroup.Item
+                style={{
+                  backgroundColor: "#edf2f7",
+                  color: "#444444",
+                }}
+              >
+                <h2>Order Items</h2>
+                {cart.cartItems.length === 0 ? (
+                  <Message>Your cart is empty</Message>
+                ) : (
+                  <ListGroup variant="flush">
+                    {cart.cartItems.map((item, index) => (
+                      <ListGroup.Item
+                        key={index}
+                        style={{
+                          backgroundColor: "lightgrey",
+                          color: "#444444",
+                        }}
+                        className="my-1 p-3 rounded card"
+                      >
+                        <Row>
+                          <Col md={1}>
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              fluid
+                              rounded
+                            />
+                          </Col>
+                          <Col>
+                            <Link to={`/product/${item.product}`}>
+                              {item.name}
+                            </Link>
+                          </Col>
+                          <Col md={4}>
+                            {item.qty} x ${item.price} = $
+                            {(item.qty * item.price).toFixed(2)}
+                          </Col>
+                        </Row>
+                      </ListGroup.Item>
+                    ))}
+                  </ListGroup>
+                )}
+                <hr />
+              </ListGroup.Item>
+            </ListGroup>
+          </Card>
         </Col>
         <Col md={4}>
           <Card>
             <ListGroup variant="flush">
-              <ListGroup.Item>
+              <ListGroup.Item
+                style={{
+                  backgroundColor: "#edf2f7",
+                  color: "#444444",
+                }}
+              >
                 <h2>Order Summary</h2>
               </ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item
+                style={{
+                  backgroundColor: "#edf2f7",
+                  color: "#444444",
+                }}
+              >
                 <Row>
                   <Col>Items</Col>
                   <Col>${cart.itemsPrice}</Col>
                 </Row>
               </ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item
+                style={{
+                  backgroundColor: "#edf2f7",
+                  color: "#444444",
+                }}
+              >
                 <Row>
                   <Col>Shipping</Col>
                   <Col>${cart.shippingPrice}</Col>
                 </Row>
               </ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item
+                style={{
+                  backgroundColor: "#edf2f7",
+                  color: "#444444",
+                }}
+              >
                 <Row>
                   <Col>Tax</Col>
                   <Col>${cart.taxPrice}</Col>
                 </Row>
               </ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item
+                style={{
+                  backgroundColor: "#edf2f7",
+                  color: "#444444",
+                }}
+              >
                 <Row>
                   <Col>Total</Col>
                   <Col>${cart.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item
+                style={{
+                  backgroundColor: "#edf2f7",
+                  color: "#444444",
+                }}
+              >
                 {error && <Message variant="danger">{error}</Message>}
               </ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item
+                style={{
+                  backgroundColor: "#edf2f7",
+                  color: "#444444",
+                }}
+              >
                 <Button
                   type="button"
                   className="btn-block"

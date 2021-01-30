@@ -65,7 +65,12 @@ export default function ProductScreen({ history, match }) {
           <Col md={3}>
             <Card>
               <ListGroup variant="flush">
-                <ListGroup.Item>
+                <ListGroup.Item
+                  style={{
+                    backgroundColor: "#edf2f7",
+                    color: "#444444",
+                  }}
+                >
                   <Row>
                     <Col>Price: </Col>
                     <Col>
@@ -73,7 +78,12 @@ export default function ProductScreen({ history, match }) {
                     </Col>
                   </Row>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item
+                  style={{
+                    backgroundColor: "#edf2f7",
+                    color: "#444444",
+                  }}
+                >
                   <Row>
                     <Col>Status: </Col>
                     <Col>
@@ -82,7 +92,12 @@ export default function ProductScreen({ history, match }) {
                   </Row>
                 </ListGroup.Item>
                 {product.countInStock > 0 && (
-                  <ListGroup.Item>
+                  <ListGroup.Item
+                    style={{
+                      backgroundColor: "#edf2f7",
+                      color: "#444444",
+                    }}
+                  >
                     <Row>
                       <Col>Quantity</Col>
                       <Col>
@@ -101,7 +116,12 @@ export default function ProductScreen({ history, match }) {
                     </Row>
                   </ListGroup.Item>
                 )}
-                <ListGroup.Item>
+                <ListGroup.Item
+                  style={{
+                    backgroundColor: "#edf2f7",
+                    color: "#444444",
+                  }}
+                >
                   <Button
                     onClick={addToCartHandler}
                     className="btn-block"
