@@ -20,7 +20,6 @@ const storage = new CloudinaryStorage({
   cloudinary: cloud,
   params: {
     folder: "images",
-    // transformation: '540x430pad',
     public_id: (req, file) =>
       `${file.originalname.split(".")[0]}-${Date.now()}`,
   },
