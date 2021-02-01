@@ -94,7 +94,7 @@ export default function ProductEditScreen({ match, history }) {
 
   return (
     <>
-      <Link to="/admin/productList" className="btn btn-light my-3">
+      <Link to="/admin/productList" className="btn btn-primary my-3">
         Go Back
       </Link>
       {loading ? (

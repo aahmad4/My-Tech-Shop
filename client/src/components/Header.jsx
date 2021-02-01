@@ -10,7 +10,6 @@ export default function Header() {
   const dispatch = useDispatch();
 
   const userLogin = useSelector((state) => state.userLogin);
-
   const { userInfo } = userLogin;
 
   const logoutHandler = () => {
@@ -18,8 +17,14 @@ export default function Header() {
   };
 
   return (
-    <header>
-      <Navbar bg="primary" variant="dark" expand="lg" collapseOnSelect>
+    <header style={{ marginBottom: "5rem" }}>
+      <Navbar
+        bg="primary"
+        variant="dark"
+        expand="lg"
+        collapseOnSelect
+        fixed="top"
+      >
         <Container>
           <LinkContainer to="/" style={{ fontWeight: "bold" }}>
             <Navbar.Brand>👑 Alibaba Shop</Navbar.Brand>
