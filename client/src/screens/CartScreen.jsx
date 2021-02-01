@@ -37,13 +37,20 @@ export default function CartScreen({ history, match, location }) {
     history.push("/login?redirect=shipping");
   };
 
+  const cardStyle =
+    cartItems.length === 0
+      ? {
+          backgroundColor: "#edf2f7",
+          border: "none",
+        }
+      : {};
+
   return (
     <>
       <h1>Shopping Cart</h1>
-
       <Row>
         <Col md={8}>
-          <Card>
+          <Card style={cardStyle}>
             {cartItems.length === 0 ? (
               <Message>
                 Your cart is empty <Link to="/">Go Back</Link>

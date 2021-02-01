@@ -19,7 +19,7 @@ cloud.config({
 const storage = new CloudinaryStorage({
   cloudinary: cloud,
   params: {
-    folder: "images",
+    folder: "productImages",
     public_id: (req, file) =>
       `${file.originalname.split(".")[0]}-${Date.now()}`,
   },
