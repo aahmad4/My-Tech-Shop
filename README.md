@@ -2,6 +2,15 @@
 
 An e-commerce website made with React.js, Redux, Node.js, Express.js, MongoDB, Cloudinary, and The PayPal API.
 
+## Summary
+
+  - [Getting Started](#getting-started)
+  - [Runing the server](#running-the-server)
+  - [Deployment](#deployment)
+  - [Built With](#built-with)
+  - [Contributing](#contributing)
+  - [License](#license)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
