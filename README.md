@@ -15,9 +15,17 @@ An e-commerce website made with React.js, Redux, Node.js, Express.js, MongoDB, C
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Installing
+### Setup
 
 A step by step series of examples that tell you how to get a development env running.
+
+#### Clone
+
+```sh
+git clone https://github.com/aahmad4/Alibaba-Shop
+```
+
+#### Installation
 
 Use the package manager [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) to install the required packages.
 
