@@ -5,8 +5,6 @@ An e-commerce website made with React.js, Redux, Node.js, Express.js, MongoDB, C
 ## Summary
 
   - [Getting Started](#getting-started)
-  - [Runing the server](#running-the-server)
-  - [Deployment](#deployment)
   - [Built With](#built-with)
   - [Contributing](#contributing)
   - [License](#license)
@@ -22,14 +20,14 @@ A step by step series of examples that tell you how to get a development env run
 #### Clone
 
 ```sh
-git clone https://github.com/aahmad4/Alibaba-Shop
+$ git clone https://github.com/aahmad4/Alibaba-Shop
 ```
 
 #### Installation
 
 Use the package manager [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) to install the required packages.
 
-```ssh
+```sh
 $ npm install
 $ cd client
 $ npm install
@@ -37,23 +35,19 @@ $ npm install
 
 or
 
-```ssh
+```sh
 $ yarn install
 $ cd client
 $ yarn install
 ```
 
-## Running the server
+#### Usage
 
-This project uses concurrently to run the client and server at the same time. To utilize it run the following command in the root directory.
+Using concurrently, this will run the back-end server and client-side application at the same time. By default, the back-end will run on port 5000 and the React app will be visible in your browser at port 3000. 
 
-```ssh
-npm run dev
 ```
-
-## Deployment
-
-An example of the .env file is included with the project. Create an account on MongoDB Atlas, PayPal, and Cloudinary then make a .env file with the associated credentials.
+$ npm run dev
+```
 
 ## Built With
 
@@ -64,6 +58,7 @@ An example of the .env file is included with the project. Create an account on M
 * [MongoDB](https://www.mongodb.com/) - Database
 * [Cloudinary](https://cloudinary.com/) - Cloud-based image hosting
 * [PayPal Developer API](https://developer.paypal.com/) - Online payments system
+* [Heroku](https://www.heroku.com/) - Cloud application platform
 
 ## Contributing
 
