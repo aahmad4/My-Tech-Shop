@@ -11,7 +11,7 @@ An e-commerce website made with React.js, Redux, Node.js, Express.js, MongoDB, C
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Setup
 
@@ -47,6 +47,21 @@ Using concurrently, this will run the back-end server and client-side applicatio
 
 ```
 $ npm run dev
+```
+
+#### Implementation
+
+In the root directory create a file named `.env` with the following enviornment variables. For the MongoDB URI, PayPal Client ID, and Cloudinary App Information, simple register an account at the appropriate services and create your credentials there. Once completed, paste the value into this file next to the correct variables. 
+
+```env
+NODE_ENV = development
+PORT = 5000
+MONGO_URI = 
+JWT_SECRET = somethingrandom123
+PAYPAL_CLIENT_ID = 
+CLOUDINARY_CLOUD_NAME = 
+CLOUDINARY_API_KEY = 
+CLOUDINARY_API_SECRET = 
 ```
 
 ## Built With
