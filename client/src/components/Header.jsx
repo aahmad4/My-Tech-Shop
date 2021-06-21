@@ -27,7 +27,7 @@ export default function Header() {
       >
         <Container>
           <LinkContainer to="/" style={{ fontWeight: "bold" }}>
-            <Navbar.Brand>👑 Alibaba Shop</Navbar.Brand>
+            <Navbar.Brand>👑 My Tech Shop</Navbar.Brand>
           </LinkContainer>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

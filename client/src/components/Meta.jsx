@@ -12,8 +12,8 @@ export default function Meta({ title, description, keywords }) {
 }
 
 Meta.defaultProps = {
-  title: "Alibaba Shop",
+  title: "My Tech Shop",
   description:
-    "Welcome To Alibaba Shop. Find the best products at the most affordable prices!",
+    "Welcome To My Tech Shop. Find the best products at the most affordable prices!",
   keywords: "Electronics, Eccomerce, Buying, Selling, Cheap Products",
 };
